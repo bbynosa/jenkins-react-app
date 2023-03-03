@@ -173,7 +173,7 @@ export default function AppMenuBar() {
             component="div"
             sx={{ display: { xs: 'none', sm: 'block' } }}
           >
-            Todoist
+            Todoist: Hello Jenkins!
           </Typography>
           <Search>
             <SearchIconWrapper>
