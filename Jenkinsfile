@@ -10,9 +10,9 @@ pipeline {
         stage("Deploy") {
             steps {
                 sh "ssh -tt vagrant@192.168.21.30"
-                sh "sudo rm -rf /var/www/jenkins-react-app"
+                sh "rm -rf /var/www/jenkins-react-app/*"
                 sh "exit"
-                sh "scp -r ${WORKSPACE}/build/ vagrant@192.168.21.30:/var/www/jenkins-react-app/"
+                sh "scp -r ${WORKSPACE}/build/* vagrant@192.168.21.30:/var/www/jenkins-react-app/"
             }
         }
     }
